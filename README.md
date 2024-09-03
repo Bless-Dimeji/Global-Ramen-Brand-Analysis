@@ -6,7 +6,7 @@ Ramen Analysis and Visualization
 Project Overview
 This project involves a comprehensive analysis of ramen reviews, focusing on various brands, flavors, and customer preferences. The data analysis is complemented by visualizations to provide insights into trends and patterns in the ramen industry. The goal is to uncover factors that contribute to higher ratings and popularity among ramen brands.
 
-Data Source
+Data Source:
 The data used in this analysis was sourced from a dataset containing reviews of various ramen products from different brands around the world. Each review includes information such as the brand, variety, style, country of origin, and rating.
 
 Key Analysis
