@@ -1,6 +1,7 @@
+IMPORT Ramen.csv into SQL Server
+
 SELECT *
 FROM Ramenreviews;
-
 
 -- Exploratory Data Analysis of Ramenreviews Table
 
@@ -28,13 +29,15 @@ SELECT Style,
 FROM Ramenreviews
 GROUP BY Style
 ORDER BY TotalProducts DESC;
-
+GO
+	
  CREATE VIEW
 	ProductsbyStyle as
 	SELECT Style, COUNT(*) AS TotalProducts
 	FROM Ramenreviews
 	GROUP BY Style;
-
+GO
+	
 --Changing 'Samyang' in Brand to 'Samyang Foods'
 UPDATE Ramenreviews
 SET Brand = 'Samyang Foods'
@@ -54,7 +57,14 @@ SELECT TOP 10 Brand,
 FROM Ramenreviews
 GROUP BY Brand
 ORDER BY Products DESC;
+GO
 
+CREATE VIEW TopBrandsWithMostProducts AS
+	SELECT TOP 10 Brand, 
+		COUNT(*) AS Products 
+	FROM Ramenreviews
+	GROUP BY Brand;
+GO
 
 --Total Products in descending order for Brands in South Korea, China and Japan
 SELECT Country, 
