@@ -3,13 +3,13 @@ IMPORT Ramen.csv into SQL Server
 SELECT *
 FROM Ramenreviews;
 
+--Changing null values in Stars column to 'Unrated'
 SELECT * 
 FROM Ramenreviews 
 WHERE stars = 'Unrated';
 
 UPDATE Ramenreviews 
 SET stars = NULL WHERE stars = 'Unrated';
-
 
 -- Exploratory Data Analysis of Ramenreviews Table
 
