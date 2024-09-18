@@ -3,6 +3,14 @@ IMPORT Ramen.csv into SQL Server
 SELECT *
 FROM Ramenreviews;
 
+SELECT * 
+FROM Ramenreviews 
+WHERE stars = 'Unrated';
+
+UPDATE Ramenreviews 
+SET stars = NULL WHERE stars = 'Unrated';
+
+
 -- Exploratory Data Analysis of Ramenreviews Table
 
 --Average rating of all Ramen products
